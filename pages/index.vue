@@ -29,6 +29,7 @@
       <h1 v-if="!componentActive" class="text-white font-bold text-2xl"> NIX HIER</h1>
       <component :is="current" :bgColor="bgColor" v-if="componentActive" @closeComponent="closeComponent"/>
     </div>
+    <a class="text-white underline" target="_blank" href="https://github.com/illumou/vue-variable-components"> Github Repo </a>
   </div>
 </template>
 
