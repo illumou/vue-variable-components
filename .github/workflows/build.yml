@@ -21,5 +21,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
         name: Install dependencies
-      - run: npm run build
-        name: Building Webapp
+      - run: npm run generate
+        name: Generate Webapp
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
